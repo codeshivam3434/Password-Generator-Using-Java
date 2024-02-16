@@ -1,0 +1,257 @@
+Resetting default margin and padding
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #161b22; /* Dark background color */
+  color: #e4e7eb; /* Light text color */
+}
+
+.container {
+  position: relative; /* Ensure that the container is positioned relative */
+  max-width: 600px;
+  margin: 50px auto;
+  background: #2d333b; /* Slightly lighter background color */
+  padding: 30px;
+  border-radius: 20px; /* Increased border-radius for a smoother look */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Darker box shadow */
+  border: 1px solid #3d424d;
+}
+
+h1 {
+  text-align: center;
+  color: #61dafb;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Password box */
+.password-box {
+  position: absolute; /* Change to absolute positioning */
+  top: 0; /* Adjust the top position as needed */
+  right: 0; /* Adjust the right position as needed */
+}
+
+/* Input styles */
+.display-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.display {
+  width: 100%;
+  padding: 20px;
+  font-size: 28px;
+  border: 2px solid #61dafb;
+  border-radius: 15px;
+  outline: none;
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
+  transition: border-color 0.3s ease;
+  background: #282c34;
+  color: #61dafb;
+}
+
+.display:focus {
+  border-color: #45a049;
+}
+
+/* Button styles */
+button[data-copy] {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: #61dafb;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #15161a;
+}
+
+button[data-copy] span {
+  display: none;
+  position: absolute;
+  top: -30px;
+  right: -15px;
+  padding: 10px 15px;
+  background-color: #45a049;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+button[data-copy]:hover span {
+  display: inline-block;
+}
+
+/* Range input styles */
+.inputContainer {
+  margin-bottom: 30px;
+}
+
+.length-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #61dafb, #45a049);
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.4);
+}
+
+input[type="range"]:hover {
+  background: linear-gradient(to right, #45a049, #61dafb);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.4);
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  margin-bottom: 20px;
+}
+
+/* Strength indicator styles */
+.strength-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+[data-indicator] {
+  width: 50px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+[data-indicator="#0f0"] {
+  background-color: #4caf50;
+}
+
+[data-indicator="#ff0"] {
+  background-color: #ffc107;
+}
+
+[data-indicator="#f00"] {
+  background-color: #f44336;
+}
+
+/* Generate button styles */
+.generateButton {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to right, #61dafb, #45a049);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+
+.generateButton:hover {
+  background: linear-gradient(to right, #45a049, #61dafb);
+}
+
+/* Copy message styles */
+.copyMsg {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #45a049;
+}
+
+.copyMsg.active {
+  display: block;
+}
+
+/* Your existing CSS styles */
+
+/* Additional styles for typewriter effect */
+#typewriter-name {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #61dafb; /* Text color */
+  font-size: 24px; /* Font size */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing content */
+}
+/* Your existing CSS styles */
+
+/* Additional styles for typewriter effect */
+/* Additional styles for typewriter effect */
+#typewriter-name {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #61dafb; /* Text color */
+  font-size: 24px; /* Font size */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+#typewriter-name::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 5px; /* Adjusted space between cursor and text */
+  animation: typing 2s steps(6) infinite; /* Adjusted duration */
+}
+
+@keyframes typing {
+  from, 50%, to {
+    width: 0;
+  }
+  60%, 100% {
+    width: 100%;
+  }
+}
+
+/* Cursor blinking animation */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #61dafb;
+  }
+}
+
+/* Your existing CSS styles */
+
+/* Your existing CSS styles */
+
+
+
